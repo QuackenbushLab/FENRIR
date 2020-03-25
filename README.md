@@ -1,6 +1,6 @@
-# Formidable Exploration of humaN Reads for vIRal sequences (FENRIR): an RNA-Seq pipeline
+# Focused Exploration of NGS Reads for Infectious RNAs (FENRIR): an RNA-Seq pipeline
 
-### Last updated: March 4th, 2019
+### Last updated: March 25th, 2020
 - *updated scripts*
 - *can now measure ERV expression*
 

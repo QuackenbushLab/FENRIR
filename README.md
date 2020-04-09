@@ -11,7 +11,7 @@ For details on what is in this repo as well as a guide for how to download and r
 <p align="center">
   <img src="https://github.com/QuackenbushLab/FENRIR/blob/master/FENRIR_pipeline.jpg" height="500">
 </p>
-*FENRIR Pipeline Overview*
+_FENRIR Pipeline Overview_
 
 ## Image contents and pipeline components
 

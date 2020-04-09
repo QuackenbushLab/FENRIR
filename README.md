@@ -108,8 +108,9 @@ In the very least, the main directory should contain the following and look some
 - input: where all of the input .fastq files should be stored
 - ref: where all reference files (reference genome, pseudovirome, .gtfs, .beds, etc) should be stored
 
-
-           
+<p align="center">
+  <img src="https://github.com/QuackenbushLab/FENRIR/blob/master/working_directory_structure.png" height="500">
+</p>           
 
 
 ## Running the pipeline

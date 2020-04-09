@@ -8,14 +8,17 @@ We present a pipeline for the detection of exogenous human-tropic and endogenous
 
 For details on what is in this repo as well as a guide for how to download and run this package, please keep reading.
 
+Here is an overview of the FENRIR pipeline before we begin.
+
 <p align="center">
   <img src="https://github.com/QuackenbushLab/FENRIR/blob/master/FENRIR_pipeline.jpg" height="500">
 </p>
-_FENRIR Pipeline Overview_
 
-## Image contents and pipeline components
+
+## Pipeline components
 
 The following tools are required for FENRIR. A script within the FENRIR pipeline is responsible for downloading and installing all of the necessary tools, so installing these tools on ones own isn't needed:
+**For shell scripts**:
 - [**FastQC**](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/): *to check quality of reads pre- and post-trimming*
 - [**Trimmomatic**](http://www.usadellab.org/cms/?page=trimmomatic): *trimming software to remove short and/or low-quality reads*
 - [**HISAT2**](https://ccb.jhu.edu/software/hisat2/index.shtml): *aligner used to remove human reads and align unmapped reads to the pseudovirome reference*
@@ -24,16 +27,39 @@ The following tools are required for FENRIR. A script within the FENRIR pipeline
 - [**Python**](https://www.python.org/downloads/): *HISAT2 needs this*
 - [**Java**](https://packages.ubuntu.com/hu/xenial/openjdk-8-jdk): *Trimmomatic and Picard need this*
 - [**Picard**](https://broadinstitute.github.io/picard/): *used to remove PCR duplicates from alignment output*
-- [**featureCounts**](http://bioinf.wehi.edu.au/featureCounts/): *used to count exogenous and endogenous reads*
+- [**HTSeq-Count**](https://htseq.readthedocs.io/en/release_0.11.1/count.html): *used to count exogenous and endogenous reads*
 - [**R**](https://www.r-project.org/): *used to merge read counts into one .csv file and used to calculate coverage of both a virus and ORF of interest*
 - [**TandemRepeatsFinder**](https://tandem.bu.edu/trf/trf.html): *removes tandem repeats from alignment output. There is  an online tool that one can use to generate a list of tandem repeats found within a desired genome. The list of tandem repeats for our pseudovirome is included in this repo (Pseudovirome_2.7.7.80.10.50.2000.bed).*
 - [**fastq-pair**](https://github.com/linsalrob/fastq-pair): *pairs unmapped reads prior to pseudovirome alignment*
 
+**For R**:
+- [**Reshape**](https://cran.r-project.org/web/packages/reshape/index.html): *reorganizes count matricies so they may be graphed*
+- [**Pheatmap**](https://cran.r-project.org/web/packages/pheatmap/index.html): *makes heatmaps out of endogenous virus counts data*
+- [**data.table**](https://cran.r-project.org/web/packages/data.table/index.html): *to join columns together to generate an aggregated counts matrix across all samples*
+- [**tidyverse**](https://cran.r-project.org/web/packages/tidyverse/index.html): *to create tidy data*
+- [**BiocManager**](https://www.bioconductor.org/install/): *to download packages from Bioconductor*
+- [**GenomicAlignments**](https://bioconductor.org/packages/release/bioc/html/GenomicAlignments.html): *to work with RNA-seq data in R*
+- [**refGenome**](https://cran.r-project.org/web/packages/refGenome/index.html):*to work with RNA-seq data in R*
+- [**RSQLite**](https://cran.r-project.org/web/packages/RSQLite/index.html)
+- [**doBy**](https://cran.r-project.org/web/packages/doBy/index.html)
 
-- [**BLAST**](https://blast.ncbi.nlm.nih.gov/Blast.cgi): *used to screen the output for reads that do not align to exogenous human-tropic viruses so they may be removed, and to look up the function of ORFs with 50% or more coverage.*
-- [**IGV**](http://software.broadinstitute.org/software/igv/): *used to view alignment output. Provides an image for virus and ORF coverage.*
 
-# Installation
+**The following programs will also be installed, but are optional depending on what one needs to do**:
+- [**SRA Toolkit**](https://ncbi.github.io/sra-tools/install_config.html): *to download test data and split .sra files into .fastq files*
+- [**gffread**](http://ccb.jhu.edu/software/stringtie/gff.shtml): *used to convert gff3 to gtf, in the event one wishes to make their own reference and/or pseudovirome*
+- [**RStudio**](https://rstudio.com/products/rstudio/download/):*in case one wishes a more visual approach to running the R scripts*
+- [**BEDOPS**](https://bedops.readthedocs.io/en/latest/content/reference/file-management/conversion/convert2bed.html):*to create a .bed file of ones own endogenous viruses of interest*
+
+
+**The following will not be automatically installed, but since these are optional one can download them at the given locations**:
+- [**Tandem Repeat Finder**](https://tandem.bu.edu/trf/trf.download.html): *used to identify tandem repeats from the given pseudovirome, generating a .dat file that can be converted into a .bed. Can be downloaded from the web browser.*
+- [**Tandem Repeat Finder dat to bed/txt**](https://github.com/hdashnow/TandemRepeatFinder_scripts): *used to convert the Tandem Repeat Finder output .dat file into a .bed file. This .bed file is used to remove tandem repeats from RNA-seq data. Can be cloned from the github repository with the command git clone https://github.com/hdashnow/TandemRepeatFinder_scripts.git .*
+
+
+
+# Setting up before running FENRIR
+
+
 
 ## Reference genome 
 

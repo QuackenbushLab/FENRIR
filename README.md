@@ -8,7 +8,7 @@ We present a pipeline for the detection of exogenous human-tropic and endogenous
 
 For details on what is in this repo as well as a guide for how to download and run this package, please keep reading.
 
-![FENRIR pipeline](https://github.com/QuackenbushLab/FENRIR/blob/master/FENRIR_pipeline.jpg| width=100)
+![FENRIR pipeline](https://github.com/QuackenbushLab/FENRIR/blob/master/FENRIR_pipeline.jpg | width=100)
 
 ## Image contents and pipeline components
 

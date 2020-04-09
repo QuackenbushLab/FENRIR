@@ -1,24 +1,17 @@
 # Focused Exploration of NGS Reads for Infectious RNAs (FENRIR): an RNA-Seq pipeline
 
-### Last updated: March 25th, 2020
-- *updated scripts*
-- *can now measure ERV expression*
+### Last updated: April 9th, 2020
+- *more compact script with two execution commands instead of many*
 
 
-We present the components used to detect exogenous human-tropic virus-specific reads within a model dataset, which includes our trimming, alignment, quality filtering, and viral counts protocols. This pipeline is also capable of detecting endogenous viral sequences within the human reference, however a viral counts protocol is not present and is currently in the making. The exogenous virome reference file (referred to as the pseudovirome) is also present. We recommend aligning your reads to hg38 to remove human-specific reads prior to alignment to the pseudovirome. One could align reads post-trimming to the pseudovirome considering our test has currently not noticed a significant difference in the number of mapped virus-specific reads. If this last step is chosen, we would recommend an additional filtering step to ensure that there are no reads present in the alignment output that map to hg38. 
+We present a pipeline for the detection of exogenous human-tropic and endogenous virus-specific reads within a given dataset, with the goal of providing an easily executable pipeline for those who are unfamiliar with bioinformatics and wish to collect virus expression data from their paired-end, unstranded RNA-seq data. FENRIR includes our trimming, alignment, quality filtering, and viral counts protocols for both endogenous and exogenous viruses. This pipeline also graphs virus expression data and RNA-seq coverage over detected viruses, exporting matricies of virus fragment counts and percent coverage over a viral genome, and jpegs of expression data and virus genome coverage. 
 
-For details on what is in this repo as well as a guide for how to download and run this image, please see the manual or below.
+For details on what is in this repo as well as a guide for how to download and run this pckage, please keep reading.
 
-# Docker Image
-
-FENRIR was saved as a Docker image, which can be found [here](https://hub.docker.com/r/froy01/fenrir).
-
-To download the image, run:
-`docker pull froy01/fenrir`
 
 ## Image contents and pipeline components
 
-The following tools are included in the Docker image:
+The following tools are required for FENRIR. A script within the FENRIR pipeline is responsible for downloading and installing all of the necessary tools, so installing these tools on ones own isn't needed:
 - [**FastQC**](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/): *to check quality of reads pre- and post-trimming*
 - [**Trimmomatic**](http://www.usadellab.org/cms/?page=trimmomatic): *trimming software to remove short and/or low-quality reads*
 - [**HISAT2**](https://ccb.jhu.edu/software/hisat2/index.shtml): *aligner used to remove human reads and align unmapped reads to the pseudovirome reference*
@@ -28,14 +21,13 @@ The following tools are included in the Docker image:
 - [**Java**](https://packages.ubuntu.com/hu/xenial/openjdk-8-jdk): *Trimmomatic and Picard need this*
 - [**Picard**](https://broadinstitute.github.io/picard/): *used to remove PCR duplicates from alignment output*
 - [**featureCounts**](http://bioinf.wehi.edu.au/featureCounts/): *used to count exogenous and endogenous reads*
-
-The following tools are not included in this Docker image, but we plan on including them in future updates:
 - [**R**](https://www.r-project.org/): *used to merge read counts into one .csv file and used to calculate coverage of both a virus and ORF of interest*
-- [**BLAST**](https://blast.ncbi.nlm.nih.gov/Blast.cgi): *used to screen the output for reads that do not align to exogenous human-tropic viruses so they may be removed, and to look up the function of ORFs with 50% or more coverage.*
-- [**IGV**](http://software.broadinstitute.org/software/igv/): *used to view alignment output. Provides an image for virus and ORF coverage.*
 - [**TandemRepeatsFinder**](https://tandem.bu.edu/trf/trf.html): *removes tandem repeats from alignment output. There is  an online tool that one can use to generate a list of tandem repeats found within a desired genome. The list of tandem repeats for our pseudovirome is included in this repo (Pseudovirome_2.7.7.80.10.50.2000.bed).*
 - [**fastq-pair**](https://github.com/linsalrob/fastq-pair): *pairs unmapped reads prior to pseudovirome alignment*
 
+
+- [**BLAST**](https://blast.ncbi.nlm.nih.gov/Blast.cgi): *used to screen the output for reads that do not align to exogenous human-tropic viruses so they may be removed, and to look up the function of ORFs with 50% or more coverage.*
+- [**IGV**](http://software.broadinstitute.org/software/igv/): *used to view alignment output. Provides an image for virus and ORF coverage.*
 
 # Installation
 

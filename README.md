@@ -109,7 +109,7 @@ In the very least, the main directory should contain the following and look some
 - ref: where all reference files (reference genome, pseudovirome, .gtfs, .beds, etc) should be stored
 
 <p align="center">
-  <img src="https://github.com/QuackenbushLab/FENRIR/blob/master/working_directory_structure.png" height="500">
+  <img src="https://github.com/QuackenbushLab/FENRIR/blob/master/working_directory_structure.png" height="200">
 </p>           
 
 

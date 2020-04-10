@@ -177,14 +177,14 @@ If you wish to save standard out as a log for later, you can instead execute the
 Once the pipeline is done running, the overworld directory should look something like this:
 
 <p align="center">
-  <img src="https://github.com/QuackenbushLab/FENRIR/blob/master/overworld_output.png" height="50 width="75">
+  <img src="https://github.com/QuackenbushLab/FENRIR/blob/master/overworld_output.png" height="75" width="2000">
 </p>
 
 You should find the following within each directory:
 - input: empty
 - ref: reference files (see below)
 <p align="center">
-  <img src="https://github.com/QuackenbushLab/FENRIR/blob/master/Ref_output.png" height="100" width="2000">
+  <img src="https://github.com/QuackenbushLab/FENRIR/blob/master/Ref_output.png" height="75" width="2000">
 </p>
 
 BLAST_results  FENRIR_R.log         Programs.sh             Reference_Alignment  Variables.txt   gclib       hisat2-2.1.0           

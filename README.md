@@ -116,18 +116,29 @@ In the very least, the main directory should contain the following and look some
 
 # Running the pipeline
 
+Once all files are properly organized, run the Programs.sh script:
+
+```
+./Programs.sh
+```
+
+Don't wander too far because the script will require interactive input as it's running. Once it's completed, the overworld directory should look like this:
+
 
 
 ## Optional: downloading test data
 
 The data we used to build this pipeline was obtained from [Peng et al's 2014 paper on HIV-infected cells](https://www.ncbi.nlm.nih.gov/pubmed/24850744), with their [RNA-seq data stored in the SRA database](https://www.ncbi.nlm.nih.gov/sra?term=SRP035316). To download these files and extract fastq data, one can use the SRA toolkit with the following commands:
 
-```prefetch SRR1106189 SRR1106190 SRR1106191 SRR1106192 SRR1106193 SRR1106194 SRR1106195 SRR1106196 SRR1106197 SRR1106198 SRR1106199 SRR1106200 SRR1106201 SRR1106202 SRR1106203 SRR1106204
+```
+prefetch SRR1106189 SRR1106190 SRR1106191 SRR1106192 SRR1106193 SRR1106194 SRR1106195 SRR1106196 SRR1106197 SRR1106198 SRR1106199 SRR1106200 SRR1106201 SRR1106202 SRR1106203 SRR1106204
 
 cd ncbi/public/sra/
 
 fastq-dump --split-files SRR1106189.sra SRR1106190.sra SRR1106191.sra SRR1106192.sra SRR1106193.sra SRR1106194.sra SRR1106195.sra SRR1106196.sra SRR1106197.sra SRR1106198.sra SRR1106199.sra SRR1106200.sra SRR1106201.sra SRR1106202.sra SRR1106203.sra SRR1106204.sra
 
-mv *fastq path/to/input```
+mv *fastq path/to/input
+```
 
 The above command also moves the .fastq files into the input directory.
+

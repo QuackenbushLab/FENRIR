@@ -128,6 +128,13 @@ Don't wander too far because the script will require interactive input as it's r
   <img src="https://github.com/QuackenbushLab/FENRIR/blob/master/working_directory_structure_programs.png" height="25">
 </p>           
 
+As for the reference directory, it should look something like this before you begin the alignment software:
+
+<p align="center">
+  <img src="https://github.com/QuackenbushLab/FENRIR/blob/master/reference.png" height="25">
+</p>
+
+
 ## Optional: downloading test data
 
 The data we used to build this pipeline was obtained from [Peng et al's 2014 paper on HIV-infected cells](https://www.ncbi.nlm.nih.gov/pubmed/24850744), with their [RNA-seq data stored in the SRA database](https://www.ncbi.nlm.nih.gov/sra?term=SRP035316). To download these files and extract fastq data, one can use the SRA toolkit with the following commands:

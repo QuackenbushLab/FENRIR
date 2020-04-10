@@ -131,7 +131,7 @@ Don't wander too far because the script will require interactive input as it's r
 As for the reference directory, it should look something like this before you begin the alignment software:
 
 <p align="center">
-  <img src="https://github.com/QuackenbushLab/FENRIR/blob/master/reference.png" height="25">
+  <img src="https://github.com/QuackenbushLab/FENRIR/blob/master/reference.png" height="50 width="75">
 </p>
 
 

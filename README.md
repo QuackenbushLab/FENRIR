@@ -111,7 +111,7 @@ In the very least, the main directory should contain the following and look some
 - ref: where all reference files (reference genome, pseudovirome, .gtfs, .beds, etc) should be stored
 
 <p align="center">
-  <img src="https://github.com/QuackenbushLab/FENRIR/blob/master/working_directory_structure.png" height="50">
+  <img src="https://github.com/QuackenbushLab/FENRIR/blob/master/working_directory_structure.png" height="25">
 </p>           
 
 # Running the pipeline
@@ -125,7 +125,7 @@ Once all files are properly organized, run the Programs.sh script:
 Don't wander too far because the script will require interactive input as it's running. Once it's completed, the overworld directory should look like this:
 
 <p align="center">
-  <img src="https://github.com/QuackenbushLab/FENRIR/blob/master/working_directory_structure_programs.png" height="50">
+  <img src="https://github.com/QuackenbushLab/FENRIR/blob/master/working_directory_structure_programs.png" height="25">
 </p>           
 
 ## Optional: downloading test data

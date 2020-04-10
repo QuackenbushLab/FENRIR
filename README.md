@@ -180,4 +180,10 @@ Once the pipeline is done running, the overworld directory should look something
   <img src="https://github.com/QuackenbushLab/FENRIR/blob/master/overworld_output.png" height="50 width="75">
 </p>
 
+You should find the following within each directory:
+- input: the Picard mark duplicates metrics report
+
+BLAST_results  FENRIR_R.log         Programs.sh             Reference_Alignment  Variables.txt   gclib       hisat2-2.1.0           
+FASTQC_output  FENRIR_BLAST_Prep.sh  FENRIR_R_packages.R  Pseudovirome_Alignment  Trimmed_Reads        coverage_data   gffread     htseq_counts_data        ncbi
+FENRIR.sh      FENRIR_Counts.R       JPEG_Results         R                       Trimmomatic-0.36     fastq_original  github.com  individual_counts_files  ref
 Happy hunting.

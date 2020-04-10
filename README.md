@@ -160,4 +160,12 @@ Once all files and programs are present and accounted for, one executes this com
 ./FENRIR.sh
 ```
 
+If you wish to save standard out as a log for later, you can instead execute the following command:
+
+```
+./FENRIR.sh &> FENRIR_stdout.txt
+```
+# Output
+
+
 Happy hunting.

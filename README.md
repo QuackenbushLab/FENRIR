@@ -183,7 +183,9 @@ Once the pipeline is done running, the overworld directory should look something
 You should find the following within each directory:
 - input: empty
 - ref: reference files (see below)
-
+<p align="center">
+  <img src="https://github.com/QuackenbushLab/FENRIR/blob/master/Ref_output.png" height="50 width="75">
+</p>
 
 BLAST_results  FENRIR_R.log         Programs.sh             Reference_Alignment  Variables.txt   gclib       hisat2-2.1.0           
 FASTQC_output  FENRIR_BLAST_Prep.sh  FENRIR_R_packages.R  Pseudovirome_Alignment  Trimmed_Reads        coverage_data   gffread     htseq_counts_data        ncbi

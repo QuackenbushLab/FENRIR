@@ -100,12 +100,12 @@ Before running the pipeline, assemble all files into the right file structure.
 
 In the very least, the main directory should contain the following and look something like this:
 
-- Programs.sh: the script responsible for downloading all of the programs needed for this pipeline (with the exception of R libraries)
-- FENRIR.sh: the overworld script in charge of executing all of the other scripts with exception to Programs.sh
-- FENRIR_Alignment.sh: the part of the pipeline responsible for the QC, trimming, aligning, and counting fragments
-- FENRIR_R_packages.R: the R script reponsible for downloading all of the necessary R libraries
-- FENRIR_Counts.R: merges the counts data into one matrix per alignment type (i.e. reference or pseudovirome), graphs the expression data, calculates coverage over the exogenous or endogenous viral genome, and graphs coverage over said viral genome.
-- FENRIR_BLAST_Prep.sh: extracts reads that map to a specified exogenous or endogenous virus and saves them into their own file for BLAST
+- `Programs.sh`: the script responsible for downloading all of the programs needed for this pipeline (with the exception of R libraries)
+- `FENRIR.sh`: the overworld script in charge of executing all of the other scripts with exception to Programs.sh
+- `FENRIR_Alignment.sh`: the part of the pipeline responsible for the QC, trimming, aligning, and counting fragments
+- `FENRIR_R_packages.R`: the R script reponsible for downloading all of the necessary R libraries
+- `FENRIR_Counts.R`: merges the counts data into one matrix per alignment type (i.e. reference or pseudovirome), graphs the expression data, calculates coverage over the exogenous or endogenous viral genome, and graphs coverage over said viral genome.
+- `FENRIR_BLAST_Prep.sh`: extracts reads that map to a specified exogenous or endogenous virus and saves them into their own file for BLAST
 - Variables.txt: a text file containing all of the variables one wishes to change from the standard pipeline. **this must be checked and modified before running the pipeline to fit with ones experiment**
 - input: where all of the input .fastq files should be stored
 - ref: where all reference files (reference genome, pseudovirome, .gtfs, .beds, etc) should be stored
@@ -170,7 +170,7 @@ If you wish to save standard out as a log for later, you can instead execute the
 ./FENRIR.sh &> FENRIR_stdout.txt
 ```
 
-**Do not forget to edit the Variables.txt file so it is in agreement with the input data (fastq files, different reference files if one choses to use a different set of reference files, etc) prior to running FENRIR.sh.**
+**Do not forget to edit the Variables.txt file so it is in agreement with the input data (fastq files, different reference files if one choses to use a different set of reference files, etc) prior to running `FENRIR.sh`.**
 
 # Output
 
@@ -207,7 +207,7 @@ You should find the following within each directory:
 
 - JPEG_Results: where the graphed exogenous and endogenous counts data along with graphed coverage data is stored
 
-- fastq_original: where the originial fastq files are moved to after FENRIR_Alignment.sh is done
+- fastq_original: where the originial fastq files are moved to after `FENRIR_Alignment.sh` is done
 
 - individual_counts_files: where all of the individual sample counts matricies are stored on case one wishes to look at them
 

@@ -116,6 +116,8 @@ In the very least, the main directory should contain the following and look some
 
 # Running the pipeline
 
+## Installing programs
+
 Once all files are properly organized, run the Programs.sh script:
 
 ```
@@ -138,7 +140,7 @@ Of note, there is one additional file that is not necessary to use but we use as
 
 As an aside, there are a few extra files/programs in this directory that do not need to be present. These files/programs are: Pseudovirome.fasta.2.7.7.80.10.50.2000.dat (can be deleted once finished with Tandem Repeat Finder), TandemRepeatFinder_scripts (the directory containing the dat to bed script, which can be stored in any directory), hg38 (the directory the genome index files were downloaded in and then moved out of. This can be deleted), hg38.bed (used to get HML2.bed, so once HML2.bed is generated this file can be deleted), hg38.tar.gz (the hg38 index file original download, which can be deleted), igenomes.illumina.com.s3-website-us-east-1.amazonaws.com (the hg38 genome download, which can be deleted), trf409.linux64 (Tandem Repeat Finder software that can be stored elsewhere), and sequence.gff3 (the original Pseudovirome .gff3 download, which can be deleted once converted to .gtf).  
 
-## Optional: downloading test data
+## _Optional: downloading test data
 
 The data we used to build this pipeline was obtained from [Peng et al's 2014 paper on HIV-infected cells](https://www.ncbi.nlm.nih.gov/pubmed/24850744), with their [RNA-seq data stored in the SRA database](https://www.ncbi.nlm.nih.gov/sra?term=SRP035316). To download these files and extract fastq data, one can use the SRA toolkit with the following commands:
 
@@ -153,6 +155,8 @@ mv *fastq path/to/input
 ```
 
 The above command also moves the .fastq files into the input directory.
+
+## Running FENERIR
 
 Once all files and programs are present and accounted for, one executes this command to run the rest of the pipeline:
 

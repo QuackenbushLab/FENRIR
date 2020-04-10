@@ -134,7 +134,7 @@ As for the reference directory, it should look something like this before you be
   <img src="https://github.com/QuackenbushLab/FENRIR/blob/master/reference.png" height="50 width="75">
 </p>
 
-Of note, there is one additional file that is not necessary to use but we use as a catch all: merged.fa. This file contains all of the paired end adapter sequences Trimmomatic provides within its software. 
+Of note, there is one additional file that is not necessary to use but we use as a catch all: merged.fa. This file contains all of the paired end adapter sequences Trimmomatic provides within its software. This is also provided with the pipeline.
 
 As an aside, there are a few extra files/programs in this directory that do not need to be present. These files/programs are: Pseudovirome.fasta.2.7.7.80.10.50.2000.dat (can be deleted once finished with Tandem Repeat Finder), TandemRepeatFinder_scripts (the directory containing the dat to bed script, which can be stored in any directory), hg38 (the directory the genome index files were downloaded in and then moved out of. This can be deleted), hg38.bed (used to get HML2.bed, so once HML2.bed is generated this file can be deleted), hg38.tar.gz (the hg38 index file original download, which can be deleted), igenomes.illumina.com.s3-website-us-east-1.amazonaws.com (the hg38 genome download, which can be deleted), trf409.linux64 (Tandem Repeat Finder software that can be stored elsewhere), and sequence.gff3 (the original Pseudovirome .gff3 download, which can be deleted once converted to .gtf).  
 
@@ -165,6 +165,9 @@ If you wish to save standard out as a log for later, you can instead execute the
 ```
 ./FENRIR.sh &> FENRIR_stdout.txt
 ```
+
+**Do not forget to edit the Variables.txt file so it is in agreement with the input data (fastq files, different reference files if one choses to use a different set of reference files, etc) prior to running FENRIR.sh.**
+
 # Output
 
 

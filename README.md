@@ -174,5 +174,10 @@ If you wish to save standard out as a log for later, you can instead execute the
 
 # Output
 
+Once the pipeline is done running, the overworld directory should look something like this:
+
+<p align="center">
+  <img src="https://github.com/QuackenbushLab/FENRIR/blob/master/overworld_output.png" height="50 width="75">
+</p>
 
 Happy hunting.

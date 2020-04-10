@@ -194,23 +194,28 @@ You should find the following within each directory:
 
 - Pseudovirome_Alignment: pseudovirome alignment files(.sam, .bam, .bai, and unmapped reads in fastq format) (see below an example for one sample)
 <p align="center">
-  <img src="https://github.com/QuackenbushLab/FENRIR/blob/master/Ref_Alignment_output.png" height="75" width="2000">
+  <img src="https://github.com/QuackenbushLab/FENRIR/blob/master/Pseudovirome_alignment_output.png" height="75" width="2000">
 </p>
 
-- FASTQC_output:
-- Trimmed_Reads: 
-- coverage_data: 
-- htseq_counts_data: 
-- JPEG_Results: 
-- fastq_original: 
-- individual_counts_files: 
-- BLAST_results: 
-- Picard_metrics: 
+- FASTQC_output: the FASTQC results for the original fastq files and the post-trimming fastq files
 
-Also of note is the FENRIR_R.log
+- Trimmed_Reads: all of the trimmed fastq files
 
+- coverage_data: percent coverage matricies for both exogenous and endogenous viruses
 
-                   
+- htseq_counts_data: fragment counts matricies for both exogenous and endogenous viruses
+
+- JPEG_Results: where the graphed exogenous and endogenous counts data along with graphed coverage data is stored
+
+- fastq_original: where the originial fastq files are moved to after FENRIR_Alignment.sh is done
+
+- individual_counts_files: where all of the individual sample counts matricies are stored on case one wishes to look at them
+
+- BLAST_results: files (.fa) containing extracted reads that mapped to a detected virus 
+
+- Picard_metrics: contains the Picard report from the mark duplicates step
+
+Also of note is the FENRIR_R.log report. This contains the standard out from running FENRIR_Counts.R in case one wishes to look at the output.               
                       
   
 Happy hunting.

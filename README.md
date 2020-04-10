@@ -189,12 +189,12 @@ You should find the following within each directory:
 
 - Reference_Alignment: reference alignment files (.sam, .bam, .bai, and unmapped reads in fastq format) (see below an example for one sample)
 <p align="center">
-  <img src="https://github.com/QuackenbushLab/FENRIR/blob/master/Ref_Alignment_output.png" height="75" width="2000">
+  <img src="https://github.com/QuackenbushLab/FENRIR/blob/master/Ref_Alignment_output.png" height="75" width="200">
 </p>
 
 - Pseudovirome_Alignment: pseudovirome alignment files(.sam, .bam, .bai, and unmapped reads in fastq format) (see below an example for one sample)
 <p align="center">
-  <img src="https://github.com/QuackenbushLab/FENRIR/blob/master/Pseudovirome_alignment_output.png" height="75" width="2000">
+  <img src="https://github.com/QuackenbushLab/FENRIR/blob/master/Pseudovirome_alignment_output.png" height="75" width="200">
 </p>
 
 - FASTQC_output: the FASTQC results for the original fastq files and the post-trimming fastq files

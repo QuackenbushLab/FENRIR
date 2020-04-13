@@ -1,3 +1,11 @@
+#Description: Downloads necessary programs for the FENRIR pipeline
+#Input: None
+
+#Output: Downloaded software for FENRIR
+
+#Author:
+  #Farrah Roy
+
 #!/bin/bash
 #programs needed for FENRIR
 

@@ -1,3 +1,12 @@
+#Description: Downloads necessary libraries for FENRIR pipeline
+
+#Input: None
+
+#Output: Necessary R packages downloaded 
+
+#Author:
+  #Farrah Roy
+
 print("Installing necessary libraries")
 
 install.packages("reshape")

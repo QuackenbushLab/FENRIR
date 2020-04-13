@@ -1,3 +1,31 @@
+#Description: This script is responsible for trimming, aligning, and counting aligned reads to the reference genome (hg38)
+  #and to our pseudovirome.
+    #1) Reads Variables.txt
+    #2) Check for reference and pseudovirome .fasta and .gtf
+    #3) Checks for the presence of reference and pseudovirome index files for HISAT2. If missing, it builds index files
+    #4) FastQC on input fastq files
+    #5) Trims fastq files
+    #6) FastQC on trimmed fastq files
+    #7) Aligns trimmed fastq files to reference genome (ex. hg38)
+    #8) Aligns unmapped reads to the Pseudovirome
+    #9) Convert .sam to .bam and filter reference and pseudovirome alignments
+    #10) Calculate counts for reference and pseudovirome alignments
+    #11) Move original .fastq, trimmed .fastq, FastQC output, and alignment files into their own respective directories
+
+#Input:
+  #1) Fastq files
+  #2) Reference genome and pseudovirome
+  #3) Depending on size of the reference genome, index files for HISAT2
+  #4) .bed file containing tandem repeats in pseudovirome
+  #5) Variables.txt - filled out to match your experimental design
+
+#Output:
+  #1) Counts matricies of endogenous and exogenous viruses for individual samples and individual SAM flags
+  #2) Samtools coverage files for each sample to calculate read depth for endogenous and exogenous viruses
+
+#Author:
+  #Farrah Roy
+
 #!/bin/bash
 source Variables.txt
 echo $READING

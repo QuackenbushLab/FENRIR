@@ -21,6 +21,7 @@
   #2) graphed viral counts for endogenous and exogenous viruses
   #3) percent coverage matricies for endogenous and exogenous viruses
   #4) graphed coverage of endogenous and exogenous viruses
+  #5) produces a list of detected exogenous and endogenous viruses for the BLAST preparation script
 
 #Author:
   #Farrah Roy

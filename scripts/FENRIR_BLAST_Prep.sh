@@ -1,20 +1,17 @@
 #Description: Extracts reads aligning to exogenous or endogenous virus
+  #1) Reads in list of endogenous and exogenous viruses
+  #2) Creates a dataframe of endogenous viruses with their name and coordinates
+  #3) Extracts reads based upon coordinates for endogenous viruses or Genbank ID based on exogenous viruses
+  #4) Saves extracted reads to .fasta
+  #5) Moves .jpegs, coverage matricies, counts matricies, BLAST input files, and residual alignment files into their own directories
 
 #Input:
-  #1) Reads in list of endogenous and exogenous viruses
-  #2) Reference genome and pseudovirome
-  #3) list of proviruses of interest, otherwise use the one provided
-  #4) Depending on size of the reference genome, index files for HISAT2
-  #5) .bed file containing tandem repeats in pseudovirome
-  #6) .bed of ERVs, otherwise use the one provided
-  #7) Variables.txt - filled out to match your experimental design
+  #1) List of endogenous and exogenous viruses
+  #2) .bam for reference and pseudovirome alignments
+  #3) Variables.txt - filled out to match your experimental design
 
 #Output:
-  #1) combined counts matrix for endogenous and exogenous viruses detected in RNA-seq, respectively
-  #2) graphed viral counts for endogenous and exogenous viruses
-  #3) percent coverage matricies for endogenous and exogenous viruses
-  #4) graphed coverage of endogenous and exogenous viruses
-  #5) reads aligning to a given virus stored in a .fasta for BLAST verification
+  #1) reads aligning to a given virus stored in a .fasta for BLAST verification
 
 #Author:
   #Farrah Roy

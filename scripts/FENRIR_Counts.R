@@ -1,3 +1,32 @@
+#Description: Responsible for data processing and graphing
+  #1) Loads in needed libraries
+  #2) Read in Variables.txt
+  #3) Set variables based on Variables.txt
+  #4) Merges counts matricies to create a master counts matrix for endogenous and exogenous viruses, respectively
+  #5) Graphs endogenous and exogenous counts 
+  #6) Calculates percent coverage for endogenous and exogenous viruses
+  #7) Graphs coverage for endogenous and exogenous viruses
+  #8) Merges individual coverage files to create a master coverage matrix for endogenous and exogenoous viruses, respectively
+
+#Input:
+  #1) Individual counts matricies for each sample for each SAM flag for both endogenous and exogenous viruses
+  #2) Samtools-generaged coverage file
+  #3) .gtf for reference and pseudovirome
+  #4) List of all proviruses you're interested in. Otherwise, use the one provided.
+  #5) .bam alignment files
+  #6) Variables.txt - filled out to match your experimental design
+
+#Output:
+  #1) combined counts matrix for endogenous and exogenous viruses detected in RNA-seq, respectively
+  #2) graphed viral counts for endogenous and exogenous viruses
+  #3) percent coverage matricies for endogenous and exogenous viruses
+  #4) graphed coverage of endogenous and exogenous viruses
+
+#Author:
+  #Farrah Roy
+
+
+
 #FENRIR RNA-Seq pipeline for detection of virus-specific fragments
 #R script merges counts files, graphs their expression, calculates coverage, and plots coverage
 args = commandArgs(trailingOnly=TRUE)

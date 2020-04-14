@@ -4,7 +4,7 @@
 - *more compact script with two execution commands instead of many*
 
 
-We present a pipeline for the detection of exogenous human-tropic and endogenous virus-specific reads within a given dataset, with the goal of providing an easily executable pipeline for those who are unfamiliar with bioinformatics and wish to collect virus expression data from their paired-end, unstranded RNA-seq data. FENRIR includes our trimming, alignment, quality filtering, and viral counts protocols for both endogenous and exogenous viruses. This pipeline also graphs virus expression data and RNA-seq coverage over detected viruses, exporting matricies of virus fragment counts and percent coverage over a viral genome, and jpegs of expression data and virus genome coverage. 
+We present a pipeline for the detection of exogenous human-tropic and endogenous virus-specific reads within a given dataset, with the goal of providing an easily executable pipeline for those who are unfamiliar with bioinformatics and wish to collect virus expression data from their paired-end, unstranded RNA-seq data. FENRIR includes our trimming, alignment, quality filtering, and viral counts protocols for both endogenous and exogenous viruses. This pipeline also graphs virus expression data and RNA-seq coverage over detected viruses, exporting matrices of virus fragment counts and percent coverage over a viral genome, and jpegs of expression data and virus genome coverage. 
 
 For details on what is in this repo as well as a guide for how to download and run this package, please keep reading.
 
